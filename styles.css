@@ -167,3 +167,16 @@ body {
     padding-left: 30px;
     display: inline-block;
 }
+#resume{
+    background-color: rgb(181, 126, 220);
+    width :120px;
+    height : 50px;
+    text-align: center;
+    transition: text-decoration .5s;
+}
+#resumeText{
+   padding-top: 12px; 
+}
+#resume:hover{
+    text-decoration: underline;
+}
