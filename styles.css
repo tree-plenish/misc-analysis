@@ -1,0 +1,169 @@
+body {
+    font-family: "Courier New", sans-serif;
+    justify-items: start;
+}
+.nav-bar-wrapper{
+    /* display: flex; */
+    display: none;
+    justify-content: space-between;
+    border-bottom: 1px solid transparent;
+}
+.left-side-wrapper{
+    display: flex;
+    justify-content: space-between;
+    margin-left: 8px;
+}
+
+.header{
+    margin-top: 25px;
+    margin-bottom: 25px;
+    margin-left: 8px;
+    text-align: left;
+}
+
+.nav-link{
+    margin-right: 20px
+}
+.name{
+    margin-right: 10px;
+}
+
+.left-side-wrapper a{
+    color: grey;
+    transition: color 0.5s;
+    text-decoration: none;
+}
+
+.left-side-wrapper a:hover{
+    color: b57edc;
+}
+.left-side-wrapper :hover{
+    border-bottom: 1px solid black;
+    font-weight:bold;
+}
+.HomeBody{
+    margin-top: 75px;
+    display: grid;
+    margin-left:8px;
+    justify-content: space-evenly;
+    opacity: .5;
+}
+
+/* .HomeBody a{
+    color: grey;
+    transition: color 0.5s;
+    text-decoration: none;
+} */
+.About{
+    background-color: rgb(181, 126, 220);
+    width : 275px;
+    height : 275px;
+    grid-column: 1;
+    grid-row: 1;
+    display: block;
+    text-align: center;
+    justify-content: center;
+    transition: background-color .5s;
+    transition: text-decoration .5s;
+
+}
+
+.About:hover{
+    background-color: FDFD96;
+    text-decoration: underline;
+}
+
+.Work{
+    background-color: rgb(181, 126, 220);
+    width : 275px;
+    height : 275px;
+    grid-column: 2;
+    grid-row: 1;
+    display: block;
+    text-align: center;
+    justify-content: center;
+    transition: background-color .5s;
+    transition: text-decoration .5s;
+
+}
+.Work:hover{
+    background-color: FDFD96;
+    text-decoration: underline;
+}
+.Contact{
+    background-color: rgb(181, 126, 220);
+    width : 275px;
+    height : 275px;
+    grid-column: 3;
+    grid-row: 1;
+    display: block;
+    text-align: center;
+    justify-content: center;
+    transition: background-color .5s;
+    transition: text-decoration .5s;
+
+}
+.Contact:hover{
+    background-color: FDFD96;
+    text-decoration: underline;
+}
+
+.text{
+    padding-top: 100px;
+    padding-bottom: 190px;
+    color: black;
+}
+
+#name{
+    /* text-decoration: underline; */
+    padding: 5px;
+    padding-left: 10px;
+}
+#description{
+    padding-top: 2px;
+    padding-left: 10px;
+}
+
+.homeImages{
+    margin-top: 60px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#force1{
+    height: 220px;
+    width: auto;
+}
+
+#force2{
+    
+    height: 220px;
+    width:auto;
+    margin-left: 65px;
+}
+
+#force3{
+    height:220px;
+    width: auto;
+    margin-right: 65px;
+}
+.bio{
+    max-width: 400px;
+    display: inline-block;
+    padding-left: 50px;
+}
+.bioImg{
+    padding-left: 10px;
+    display: inline;
+}
+#theImg{
+    height: 500px;
+    width: auto;
+}
+.bioTxt{
+    min-height: 500px;
+    width:auto;
+    justify-content: right;
+    padding-left: 30px;
+    display: inline-block;
+}
