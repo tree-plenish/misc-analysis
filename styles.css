@@ -226,3 +226,38 @@ body {
     text-decoration: underline;
     cursor: grab;
 }
+.description{
+    max-width: 800px;
+    margin-left: 15px;
+}
+
+#img1{
+    max-width: 500px;
+    height: auto;
+}
+#img2{
+    max-width: 500px;
+    height: auto;
+}
+#mindset2img{
+    margin-top: 5px;
+    max-width: 800px;
+    height: auto;
+}
+#linktoproj{
+    background-color: rgb(181, 126, 220);
+    width :150px;
+    height : 70px;
+    text-align: center;
+    transition: text-decoration .5s;
+    margin: 5px;
+    transition: cursor .5s;
+
+}
+#linkText{
+    padding-top: 5px;
+ }
+ #linktoproj:hover{
+     text-decoration: underline;
+     cursor: grab;
+ }
