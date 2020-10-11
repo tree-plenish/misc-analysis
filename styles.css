@@ -148,7 +148,7 @@ body {
     margin-right: 65px;
 }
 .bio{
-    max-width: 400px;
+    max-width: 600px;
     display: inline-block;
     padding-left: 50px;
 }
@@ -179,4 +179,50 @@ body {
 }
 #resume:hover{
     text-decoration: underline;
+}
+.projects{
+    margin-left: 20px;
+    align-items: center;
+}
+.projectTitle{
+    width : 500px;
+    background-color: rgb(181, 126, 220);
+    text-align: center;
+}
+.climate{
+    text-decoration: transition .5s;
+    cursor: transition .5s;
+}
+.climate:hover{
+    text-decoration: underline;
+    cursor: grab;
+}
+#climatePic{
+    height: 270px;
+    width: auto;
+}
+#mindsetPic{
+    height: 280px;
+    width: auto;
+}
+.mindset{
+    text-decoration: transition .5s;
+    cursor: transition .5s;
+}
+.mindset:hover{
+    text-decoration: underline;
+    cursor: grab;
+}
+#mriPic{
+    height: 280px;
+    width: auto;
+    padding-left: 80px;
+}
+.MRI{
+    text-decoration: transition .5s;
+    cursor: transition .5s;
+}
+.MRI:hover{
+    text-decoration: underline;
+    cursor: grab;
 }
