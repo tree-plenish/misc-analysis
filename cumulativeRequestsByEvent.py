@@ -7,14 +7,18 @@ import datetime
 import numpy as np
 
 # Getting list of files
-path = "C:/Users/justi/Downloads/Tree Requests By Event (1)/"
+path = "C:/Users/justi/Downloads/Tree Requests By Event/"
 fileList = os.listdir(path)
+
+# Free tree indicator
+freeTreePrompt = "You have requested {{var:score}} trees, and will be prompted to donate {{var:price}} (including processing fee). Would you be able to support our student-run organization by donating an additional $5 to help us build sustainable communities?"
 
 # Administrative
 data = dict()
 errorCount = 0
 plottedCount = 0
 otherSheetCount = 0
+totalTrees = np.array([])
 
 # Looping through each file in extracted .htmls
 for file in fileList:
@@ -28,13 +32,29 @@ for file in fileList:
             # Load dataframe from html file
             df = pd.read_html(path + file)[0]
 
+            # Assigning free tree boolean value
+            if freeTreePrompt in df.values:
+
+                freeTree = False
+                color = "Red"
+                label = "Must Pay"
+
+            else:
+
+                freeTree = True
+                color = "Green"
+                label = "Free"
+            
+
             # Get the index of total trees and submit times for that sheet
             treeInd = np.where(df.iloc[[0]].values == "score")[-1][0]
             dateInd = np.where(df.iloc[[0]].values == "Submitted At")[-1][0]
 
+
             # Get list of trees requested, adding a 0 at the first day 
             treesRequested = np.append([0],df[df.columns[treeInd]][2:].values.astype(int))
-
+            totalTrees = np.append(totalTrees, np.sum(treesRequested))
+            
             # Get the dates requested in string format adding the first day
             dateArray = df[df.columns[dateInd]][2:].values
             dateRequested = np.array([datetime.datetime(2020,12,6)])
@@ -49,8 +69,9 @@ for file in fileList:
                 dateRequested = np.append(dateRequested, datetime.datetime.strptime(dt, '%m/%d/%Y %H:%M:%S'))
 
 
-            # Plot this sheets data       
-            plt.plot(dateRequested, np.cumsum(treesRequested))
+            # Plot this sheets data
+            
+            plt.step(dateRequested, np.cumsum(treesRequested), color = color, label=label)
 
             # Administrative success count
             plottedCount = plottedCount + 1
@@ -66,4 +87,5 @@ for file in fileList:
 
 # Title and display overall chart
 plt.title("Cumulative Tree Requests by Event")
+#plt.legend()
 plt.show()
