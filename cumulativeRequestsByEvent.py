@@ -75,7 +75,7 @@ for file in fileList:
             
 
             # Plot this sheets data            
-            plt.step(dateRequested, np.cumsum(treesRequested), color = color, label=label, linewidth = .3)
+            plt.step(dateRequested, np.cumsum(treesRequested), color = color, label=label, linewidth = .4)
 
             # Administrative success count
             plottedCount = plottedCount + 1
