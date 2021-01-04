@@ -69,9 +69,13 @@ for file in fileList:
                 dateRequested = np.append(dateRequested, datetime.datetime.strptime(dt, '%m/%d/%Y %H:%M:%S'))
 
 
-            # Plot this sheets data
+            # Adding the ending amount to the end of the dates
+            treesRequested = np.append(treesRequested, treesRequested[-1])
+            dateRequested = np.append(dateRequested, datetime.datetime.now())
             
-            plt.step(dateRequested, np.cumsum(treesRequested), color = color, label=label)
+
+            # Plot this sheets data            
+            plt.step(dateRequested, np.cumsum(treesRequested), color = color, label=label, linewidth = .3)
 
             # Administrative success count
             plottedCount = plottedCount + 1
