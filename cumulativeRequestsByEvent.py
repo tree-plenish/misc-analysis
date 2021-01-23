@@ -35,6 +35,7 @@ for file in fileList:
             # Assigning free tree boolean value
             if freeTreePrompt in df.values:
 
+
                 freeTree = False
                 color = "Red"
                 label = "Must Pay"
@@ -44,6 +45,7 @@ for file in fileList:
                 freeTree = True
                 color = "Green"
                 label = "Free"
+                print(file)
             
 
             # Get the index of total trees and submit times for that sheet
