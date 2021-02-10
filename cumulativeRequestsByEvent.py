@@ -7,7 +7,7 @@ import datetime
 import numpy as np
 
 # Getting list of files
-path = "C:/Users/justi/Downloads/Tree Requests By Event/"
+path = "C:/Users/justi/Downloads/Updated Tree Requests/"
 fileList = os.listdir(path)
 
 # Free tree indicator
