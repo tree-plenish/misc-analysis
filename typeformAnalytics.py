@@ -8,6 +8,7 @@ import requests
 
 
 # apiKey = HIDDEN, text me if not running on server
+apiKey = "B9a5SvWGypqrnTgn618nes5XvEiZxGkQ5z48npmc2rYy"
 headers = {"Authorization" : "Bearer " + apiKey}
     
 # Getting and choosing all ids
@@ -89,7 +90,7 @@ for i in range(len(df.event)):
 # Well this sucks... just go through it manually for now
 
 # Dropping typeforms with no requests made
-for td in [82, 63, 48, 44, 35, 21, 19, 14, 12]:
+for td in [82, 63, 48, 44, 35, 21, 19, 14, 12, 11]:
 
     del nameList[td]
     del timeList[td]
