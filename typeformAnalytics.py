@@ -8,7 +8,6 @@ import requests
 
 
 # apiKey = HIDDEN, text me if not running on server
-apiKey = "B9a5SvWGypqrnTgn618nes5XvEiZxGkQ5z48npmc2rYy"
 headers = {"Authorization" : "Bearer " + apiKey}
     
 # Getting and choosing all ids
