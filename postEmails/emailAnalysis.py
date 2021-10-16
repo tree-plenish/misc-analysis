@@ -18,7 +18,7 @@ df = principals.append(teachers)
 print(len(df), " total entries.")
 
 # Loading in responses (interest forms)
-interest_df = pd.read_csv("../../privateData/typeform1008.csv")
+interest_df = pd.read_csv("../../privateData/typeform1016.csv")
 interest_emails = interest_df["Email?"].values
 
 ################################
@@ -122,7 +122,7 @@ for commits in commit_array:
 plt.plot(commit_array, expected_states, "r", label="Expected")
 
 # Getting plotted actual for up to current number of commitments
-commit_df = pd.read_csv("../../privateData/typeform1009commits.csv")
+commit_df = pd.read_csv("../../privateData/typeform1016commits.csv")
 print("Loaded in ", len(commit_df), " commitment results.")
 
 # Cleaning states to codes
